@@ -67,8 +67,10 @@
         _pageControl = [[UIPageControl alloc] init];
         _pageControl.numberOfPages = self.pageCount;
         _pageControl.hidden = self.pageCount <= 1;
-        _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
-        _pageControl.pageIndicatorTintColor = [UIColor whiteColor];
+//        _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
+//        _pageControl.pageIndicatorTintColor = [UIColor whiteColor];
+        [_pageControl setValue:[UIImage imageNamed:@"current"] forKeyPath:@"_currentPageImage"];
+        [_pageControl setValue:[UIImage imageNamed:@"other"] forKeyPath:@"_pageImage"];
 //        [_pageControl addTarget:self action:@selector(pageClick:) forControlEvents:UIControlEventTouchUpInside];
         
     }
